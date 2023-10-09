@@ -33,7 +33,10 @@ public class PipeReader {
                           unByte = entrada.read();
                      }
                 } catch (IOException e) {
-                     System.err.println("Error al leer del pipe");
+                    // No es un error, simplemente significa que no hay más datos para leer
+                    System.out.println();
+                    System.out.println("----------------------------------------");
+                    System.out.println("Fin de la lectura.");
                 }
               }
          }.start();
